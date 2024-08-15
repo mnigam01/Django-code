@@ -16,9 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import say_hello 
+from .views import say_hello, course_enroller
+
+
+# important materiall for study
+# https://docs.djangoproject.com/en/5.0/topics/http/urls/
+# read section path converters
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', say_hello)
+    path('hello/', say_hello),
+    path('course/<slug:course_id>', course_enroller)
 ]
