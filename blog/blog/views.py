@@ -2,8 +2,10 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def home(request):
-    print("say somehing")
-    return render(request, "index.html")
+    data = {
+        "heading" : "This is a new heading"
+    }
+    return render(request, "index.html", data)
 
 def say_hello(request):
     return HttpResponse("Hello World!")
