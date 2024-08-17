@@ -1,0 +1,1 @@
+all css, javascript, images files goes in this folder
