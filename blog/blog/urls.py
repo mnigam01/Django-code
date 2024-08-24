@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import say_hello, course_enroller
+from service.views import fetch_service
 
 
 # important materiall for study
@@ -26,5 +27,6 @@ from .views import say_hello, course_enroller
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', say_hello),
-    path('course/<slug:course_id>', course_enroller)
+    path('course/<slug:course_id>', course_enroller),
+    path('service/<slug>', fetch_service)
 ]
